@@ -6,6 +6,8 @@ def getsubsequences(arr):
     for i in range(1 << l):
         sub = []
         for j in range(l):
+            check = i & (1 << j)
+            print ("For i:",i," and j:",j," the value of check is:",check)
             if (i & (1 << j)):
                 sub.append(arr[j])
         print (sub)
