@@ -1,4 +1,4 @@
-# Hackerrank algorithm problem Minimim Distances #
+# Hackerrank algorithm problem Minimum Distances #
 elements = int(input())
 l1 = list(map(int,input().split(' ')))
 d1 = {}
