@@ -1,3 +1,4 @@
+# substrings which start and end with the same character #
 def getsubstrings(str):
     sub = []
     length = len(str)
