@@ -1,7 +1,7 @@
 # Erica wrote an increasing sequence of  numbers () in her notebook. She considers a triplet  to be beautiful if:
 # i < j < k
-# a[j] - a[i] = a[k] - a[j]
-# Given the sequence and the value of , can you help Erica count the number of beautiful triplets in the sequence?
+# a[j] - a[i] = a[k] - a[j] = d
+# Given the sequence and the value of d can you help Erica count the number of beautiful triplets in the sequence?
 
 def getsustr(numbers,d):
     for i in numbers:
