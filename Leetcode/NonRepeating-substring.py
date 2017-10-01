@@ -1,18 +1,20 @@
 # Sliding window concept:
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
-s = "bbbbb"
-sliding = {}
-size = len(s)
-maxlength = 0
-for j in range(size):
-    if s[j] not in sliding:
-        sliding[s[j]] = j
-    else:
-        position = sliding[s[j]]
-        length = j - position
-        sliding = {}
-        sliding[s[j]] = j
-        if length > maxlength:
-            maxlength = length
-            
-print (maxlength)
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        start = maxLength = 0
+        usedChar = {}
+        
+        for i in range(len(s)):
+            if s[i] in usedChar and start <= usedChar[s[i]]:
+                start = usedChar[s[i]] + 1
+            else:
+                maxLength = max(maxLength, i - start + 1)
+
+            usedChar[s[i]] = i
+
+        return maxLength

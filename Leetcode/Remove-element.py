@@ -7,15 +7,11 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        pos = 0
-        val_flag = 0
-        for index,element in enumerate(nums):
-            if element != val:
-                if val_flag == 1:
-                    nums[pos] = element
-                    pos = pos + 1
-                else:
-                    pos = pos + 1
+        pointer = 0
+        for value in nums:
+            if value != val:
+                nums[pointer] = value
+                pointer += 1
             else:
-                val_flag = 1
-        return pos
+                continue
+        return pointer
