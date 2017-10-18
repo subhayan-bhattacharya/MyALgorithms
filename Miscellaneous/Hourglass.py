@@ -1,3 +1,4 @@
+# Hackerrank problem : https://www.hackerrank.com/challenges/2d-array
 arr = [list(map(int,input().split(' '))) for i in range(6)]
 #print (arr)
 values = []

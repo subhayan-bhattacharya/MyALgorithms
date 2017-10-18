@@ -14,6 +14,8 @@ d1 = 0
 d2 = 0
 d3 = 0
 
+#Pay attention to the logic of the or part in the below logic(it cannot be and)
+
 while not (sum_h1 == sum_h2 and sum_h2 == sum_h3):
     if d1 == n1 or d2 == n2 or d3 == n3:
         sum_h1 = 0

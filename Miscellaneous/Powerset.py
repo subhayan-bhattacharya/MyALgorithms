@@ -13,4 +13,15 @@ def getsubsequences(arr):
         print (sub)
         
 getsubsequences([1,2,3])
+
+
+
+# from itertools import combinations
+# s = [1,2,3]
+# pset = set()
+# for i in range(len(s) + 1):
+    # for sset in combinations(s,i):
+        # pset.add(sset)
+        
+# print (pset)
     
