@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Home form</title>
+</head>
+<body>
+	<h1>
+	Please enter below details 
+	</h1>
+	<form action="" method="POST">
+	{{ form.csrf_token }}
+	{{ form.no_of_companies.label }}
+	{{ form.no_of_companies }}
+	{% for error in form.no_of_companies.errors %}
+	<ul>
+		<li style="color:red">{{ error }}</li>
+	</ul>
+	{% endfor %}
+	</form>
+</body>
+</html>

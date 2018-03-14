@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Index form</title>
+</head>
+<body>
+	<form action="" method="POST">
+		{{ form.csrf_token }}
+        <label for="{{ form.name.name}}">{{ form.name.label.text }}</label>
+        {{ form.name }}
+        <br>
+        <label for="{{ form.password.name }}">{{ form.password.label.text }}</label>
+        {{ form.password }}
+        <br>
+        <label for="{{ form.details.name }}">{{ form.details.label.text }}</label>
+        {{ form.details }}
+        <br>
+        <label id="{{ form.sex.name }}">{{ form.sex.label.text }}</label>
+        <br>
+        {% for s in form.sex %}
+            <label>
+                {{ s.label.text }}
+                {{ s }}
+                <br>
+            </label>
+        {% endfor %}
+        <br>
+        <label for="{{ form.cars.name }}">{{ form.cars.label.text }}</label>
+        {{ form.cars }}
+        <br>
+        <label for="{{ form.appliances.name }}">{{ form.appliances.label.text }}</label>
+        {{ form.appliances }}
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

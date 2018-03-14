@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Companies Form</title>
+</head>
+<body>
+	<h1>
+	Please enter below details 
+	</h1>
+	<form action="" method="POST">
+	{{ form.csrf_token }}
+	{{ form.first_name.label }}
+	{{ form.first_name }}
+	<br>
+	{% for details in form.companies %}
+	<ul>
+	<li>
+	{{ details.company_name.label }}
+	{{ details.company_name }}
+	{% for error in details.company_name.errors %}
+	<ul>
+		<li style="color:red">{{ error }}</li>
+	</ul>
+	{% endfor %}
+	{{ details.location.label }}
+	{{ details.location }}
+	{% for error in details.location.errors %}
+	<ul>
+		<li style="color:red">{{ error }}</li>
+	</ul>
+	{% endfor %}
+	</li>
+	</ul>
+	<br>
+	{% endfor %}
+	<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

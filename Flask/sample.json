@@ -1,0 +1,14 @@
+{
+  "UserDetails":
+                {
+                  "Name":"text",
+                  "LastName":"text",
+                  "Age":"int"
+                },
+ "UserAddress":
+                {
+                  "City":"text",
+                  "State":"text",
+                  "Country":"text"
+                }
+}

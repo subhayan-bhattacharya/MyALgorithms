@@ -1,0 +1,15 @@
+{% macro renderfield(field,message=None) %}
+{% if field %}
+{{ field.label }}
+{{ field }}
+<ul>
+{% for error in field.errors %}
+{% if message %}
+    <li style="color:red"> {{ message }} </li>
+{% else %}
+    <li style="color:red"> {{ error }} </li>
+{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+{% endmacro %}

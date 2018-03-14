@@ -1,0 +1,18 @@
+{% from "_renderfields.html" import renderfield %}
+<html>
+<head>
+	<title>User Details Form</title>
+</head>
+<body>
+	<h1>
+	Please enter below details 
+	</h1>
+	<form action="" method="POST">
+	{{ form.csrf_token }}
+    {{ renderfield(form.City) }}
+    {{ renderfield(form.State) }}
+    {{ renderfield(form.Country) }}
+	<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container-fluid">
+<form action="" method="POST">
+    <label for="{{ form.name.name }}" >{{ form.name.label.text }}</label>
+    {{ form.name(class_='form-control',placeholder=form.name.label.text )|safe }}
+    <ul>
+    {% for error in form.name.errors %}
+    <li style="color:red">{{ error }}</li>
+    {% endfor %}
+    </ul>
+    <label for="{{ form.lastname.name }}" >{{ form.lastname.label.text }}</label>
+    {{ form.lastname(class_='form-control',placeholder=form.lastname.label.text )|safe }}
+    <ul>
+    {% for error in form.lastname.errors %}
+    <li style="color:red">{{ error }}</li>
+    {% endfor %}
+    </ul>
+    <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+</form>
+</div>
+{% endblock %}
