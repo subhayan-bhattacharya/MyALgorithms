@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Test index page</title>
+    </head>
+
+   <body>
+   <script type="text/javascript">
+   function clickFunction(){
+   var html_str = "";
+   $.ajax({
+   type: 'GET',
+              url: '/get_fruits/3',
+              dataType: 'json',
+              success : function(response){
+              for (var fruit of response.fruits){
+              html_str = html_str + "<li>" + fruit + "</li>"
+              }
+              $("#fruits").html(html_str);
+              },
+              error: function(jqXHR, textStatus, errorThrown){
+              console.log("There is an error thrown: "+textStatus);
+              console.log(errorThrown);
+              }
+   });
+   
+   //console.log(html_str);
+   }
+   </script>
+   <ul id="fruits">
+    {% for fruit in fruits %}
+        <li>{{ fruit}} </li>
+    {% endfor %}
+   </ul> 
+   <button onclick="clickFunction()"> Check </button>
+    
+  </body>
+
+</html>
