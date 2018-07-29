@@ -1,7 +1,5 @@
-#https://www.geeksforgeeks.org/next-greater-element/
-
 from collections import OrderedDict
-def printNGE(arr):
+def printNLE(arr):
     mappings = OrderedDict()
     stack = []
     element = 0
@@ -12,13 +10,13 @@ def printNGE(arr):
         mappings[arr[i]] = 0
         next = arr[i]
         element = stack.pop()
-        while element < next:
+        while element > next:
             mappings[element] = next
             if len(stack) != 0:
                 element = stack.pop()
             else:
                 break
-        if element > next:
+        if element < next:
             stack.append(element)
         stack.append(next)
         
@@ -28,5 +26,5 @@ def printNGE(arr):
         print(f'{key}--->{mappings[key]}')
         
 
-arr = [5, 1, 9, 2, 5, 1, 7]
+arr = [7,1,2,10,5]
 printNGE(arr)

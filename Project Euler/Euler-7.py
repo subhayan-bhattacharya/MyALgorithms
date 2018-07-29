@@ -19,5 +19,6 @@ while True:
             primes.append(start)
             count = count + 1
     start = start + 1
+print(primes)
           
         
