@@ -1,11 +1,10 @@
-# https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/the-football-fest-6/
+# https://www.hackerearth.com/challenge/hiring/superprofs-hiring-challenge/algorithm/the-football-fest-6/
 
 test_cases = int(input())
 players = []
 for test in range(test_cases):
     first,second = input().split(' ')
     players.append(second)
-    #print (players)
     back_flag = False
     for j in range(int(first)):
         checks = input().split(' ')
@@ -23,6 +22,5 @@ for test in range(test_cases):
                 last_player = players[-1]
                 del players[-1]
                 back_flag = True
-        #print (players)
-        
-    print ("Player {}".format(str(players[-1])))
+
+    print("Player {}".format(str(players[-1])))

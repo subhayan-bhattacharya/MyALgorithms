@@ -1,4 +1,4 @@
-# https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/monk-and-philosophers-stone/
+# https://www.hackerearth.com/challenge/competitive/codemonk-stacks-queues-1/algorithm/monk-and-philosophers-stone/
 
 number = int(input())
 worth = list(map(int,input().split(' ')))
